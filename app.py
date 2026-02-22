@@ -6,7 +6,6 @@ from sqlalchemy import create_engine, text
 # No deploy, o Streamlit busca essa URL em .streamlit/secrets.toml
 # Para teste local, você pode substituir pela sua string de conexão
 def get_engine():
-    # Exemplo de URL: "postgresql://usuario:senha@host:port/dbname"
     db_url = st.secrets["connections"]["postgresql"]["url"]
     return create_engine(db_url)
 
